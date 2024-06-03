@@ -103,7 +103,7 @@ class MenuPrincipal extends JFrame {
 
         add(Box.createRigidArea(new Dimension(0, 20)));
 
-        JButton btnStartGame = new JButton("Iniciar Jogo");
+        JButton btnStartGame = new JButton("Iniciar Jogo de perguntas");
         btnStartGame.setAlignmentX(Component.CENTER_ALIGNMENT);
         btnStartGame.setFont(new Font("Arial", Font.BOLD, 18));
         btnStartGame.addActionListener(new ActionListener() {
@@ -113,6 +113,17 @@ class MenuPrincipal extends JFrame {
             }
         });
         add(btnStartGame);
+
+        JButton btnStartGameVelha = new JButton("Iniciar Jogo da Velha");
+        btnStartGameVelha.setAlignmentX(Component.CENTER_ALIGNMENT);
+        btnStartGameVelha.setFont(new Font("Arial", Font.BOLD, 18));
+        btnStartGameVelha.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new JogoDaVelha().setVisible(true);
+                dispose();
+            }
+        });
+        add(btnStartGameVelha);
 
         JButton btnOption2 = new JButton("Desenvolvedores");
         btnOption2.setAlignmentX(Component.CENTER_ALIGNMENT);
